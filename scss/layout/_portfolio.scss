@@ -1,0 +1,162 @@
+.portfolio {
+    padding: 10rem 2rem;
+    box-sizing: border-box;
+    border-top: .1rem solid $color-smoke-white;
+    overflow: hidden;
+ 
+    &-inner {
+        max-width: 144rem;
+        margin: 0 auto;
+
+        h2 {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transform: translateY(20%);
+            width: 100%;
+            margin: 0 0 18rem 0;
+            text-align: center;
+            @include transition(
+                opacity 1s ease,
+                transform 1s ease
+            );
+            span {
+                font-size: 1.8rem;
+                margin: 0 0 1rem 0;
+            }
+            img {
+                height: 8rem;
+            }
+        }
+    }
+
+    &-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        height: 50rem;
+        padding: 10rem 0 0 0;
+        margin: 0 0 10rem 0;
+
+        &::before, &::after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            width: 2rem;
+            height: 2rem;
+            background: url(../img/icon/star.svg)center center no-repeat;
+        }
+        &::before {
+            left: -4rem;
+            top: 0rem;
+        }
+        &::after {
+            right: -4rem;
+            top: 0rem;
+        }
+
+        &-lf {
+            width: 56rem;
+            height: 100%;
+
+            h3 {
+                font-size: 7rem;
+                text-transform: uppercase;
+                border-bottom: .2rem solid $color-white;
+
+                span {
+                    font-size: 2rem;
+                }
+            }
+
+            &-txt {
+                position: relative;
+                width: 100%;
+                height: 20rem;
+                padding: 4rem 2rem 2rem 2rem;
+                box-sizing: border-box;
+                margin: 4rem 0 6rem 0;
+                background-color: $color-smoke-white;
+                box-sizing: border-box;
+
+                &::before {
+                    content: 'Explain . . .';
+                    display: inline-block;
+                    position: absolute;
+                    left: 2rem;
+                    top: 1.4rem;
+                    font-size: 1.2rem;
+                    color: $color-gray;
+                }
+
+                &::after {
+                    content: '✏️';
+                    display: inline-block;
+                    position: absolute;
+                    right: -2rem;
+                    top: -3rem;
+                    font-size: 3rem;
+                    animation: pencil 1s ease infinite alternate-reverse;
+                }
+
+                p {
+                    height: 14rem;
+                    color: $color-black;
+                    overflow-y: scroll;
+                }
+            }   
+            &-btn {
+                display: flex;
+                justify-content: space-between;
+                overflow: hidden;
+
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    width: 50%;
+                    padding: 1rem 4rem;
+                    text : {
+                        align : center;
+                    }
+                    color: $color-black;
+                    @include transition(
+                        width 1s ease
+                    );
+
+                    &:hover {
+                        width: 80%;
+                    }
+                    &:nth-of-type(1) {
+                        border-right: .2rem solid $color-black;
+                        background-color: $color-primary;
+                    }
+                    &:nth-of-type(2) {
+                        border-left: .2rem solid $color-black;
+                        background-color: $color-sub;
+                        color: $color-white;
+                    }
+                    strong {
+                    }
+                    span {
+                    }
+                }
+            }
+        }
+
+        &-rt {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            
+            img {
+                position: absolute;
+                right: -4rem;
+                top: 50%;
+                transform: translateY(-50%);
+                width: auto;
+                height: 50rem;
+            }
+        }
+    }
+}

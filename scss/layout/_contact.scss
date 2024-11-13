@@ -1,0 +1,31 @@
+.contact {
+    padding: 10rem 2rem;
+    box-sizing: border-box;
+    border-top: .1rem solid $color-smoke-white;
+    overflow: hidden;
+
+    &-inner {
+        position: relative;
+        max-width: 144rem;
+        margin: 0 auto;
+        font-family: "Racing Sans One", sans-serif;
+
+        p {
+            font-size: 9rem;
+            @include transition(
+                opacity 0.5s ease,
+                transform 0.5s ease,
+                font-size .2s ease
+            );
+        }
+    }
+    &-lf {
+        transform: rotate(90deg);
+        transform-origin:left;
+    }
+    &-rt {
+        text-align: end;
+        transform: rotate(-90deg);
+        transform-origin: right;
+    }
+}

@@ -1,0 +1,52 @@
+html {
+  font : {
+    size: 10px;
+    family: 'GmarketSansMedium';
+  }
+  scroll-behavior: smooth;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  overflow-x: hidden;
+  cursor: none;
+  color: #fff;
+}
+ol,li {
+  list-style: none;
+}
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  cursor: none;
+}
+button {
+  cursor: none;
+}
+em {
+  font-style: normal;
+}
+span {
+  display: inline-block;
+}
+dd,p,a {
+  letter-spacing: -.5px;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  word-break:keep-all;
+}
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+::-webkit-scrollbar {
+  width: .8rem;
+  background-color: #1c1c1b;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #063AA3;
+}

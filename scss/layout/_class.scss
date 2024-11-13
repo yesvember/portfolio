@@ -1,0 +1,48 @@
+// titles
+.title {
+  margin: 0 0 10rem 0;
+  font : {
+    size: 6rem;
+    family: "Racing Sans One", sans-serif;
+  }
+}
+// mouse
+.mouse {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 2rem;
+  height: 2rem;
+  background-color: $color-primary;
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 20000;
+  
+  @include transition(
+    transform 0.2s ease-in,
+    opacity 0.2s ease-in,
+    background-color 0.2s ease-in);
+}
+.mouse-change {
+  transform: scale(10);
+  background: url(../img/icon/mouse.png) center center no-repeat;
+  background: {
+    size: cover;
+    color: none;
+  };
+}
+.leftAndRight {
+  animation: leftAndRight 1s ease infinite alternate-reverse;
+}
+.txt-hide {
+  @include text-hide();
+}
+.trigger {
+  display: inline-block;
+  @include position-ab();
+  width: 1rem;
+  height: 1rem;
+  background-color: transparent;
+}
