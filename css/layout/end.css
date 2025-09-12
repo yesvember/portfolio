@@ -85,3 +85,8 @@
     height: 2.4rem;
   }
 }
+@media (max-width: 320px) {
+  .section-end {
+    padding: 2rem;
+  }
+}

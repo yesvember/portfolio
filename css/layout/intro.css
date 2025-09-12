@@ -18,7 +18,7 @@
 }
 .intro__decs-ani {
   display: inline-block;
-  -webkit-text-fill-color : rgba(151, 151, 151, 0.2);
+  -webkit-text-fill-color: rgba(151, 151, 151, 0.2);
   -webkit-background-clip: text;
   background-image: linear-gradient(10deg, #749bc2, #749bc2);
   background-size: 0% 100%;
@@ -76,6 +76,10 @@
   color: var(--primary-yellow);
   background-color: var(--secondary-sky);
 }
+.intro__list > li:hover {
+  color: var(--white);
+  background-color: var(--primary);
+}
 
 .intro__list:nth-child(2) li {
   text-transform: uppercase;
@@ -93,8 +97,6 @@
 
 .intro__img-wrap img {
 }
-
-
 
 /* media */
 /* 1400px */
@@ -168,7 +170,7 @@
   .intro__img-wrap > img {
     aspect-ratio: 4 / 3;
   }
-  
+
   .intro__decs {
     font-size: 8vw;
   }
