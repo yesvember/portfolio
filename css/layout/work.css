@@ -100,6 +100,7 @@
 }
 .web__etc {
   display: flex;
+  text-transform: capitalize;
 }
 .web__etc-01 {
   margin-bottom: 2rem;
