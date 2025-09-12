@@ -1,0 +1,87 @@
+.section-end {
+  padding: 16rem;
+  background-color: var(--primary-yellow);
+}
+.end__inner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  padding: 24rem 0 6rem 0;
+  background: url(../../img/end-2.jpg) center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.end__decs {
+  position: sticky;
+  top: 20rem;
+  width: 80%;
+  margin: 0 auto;
+  font-family: "Meditative", sans-serif;
+  text-align: center;
+  text-transform: capitalize;
+  line-height: 1;
+  color: var(--white);
+  mix-blend-mode: soft-light;
+}
+.end-deco {
+  position: absolute;
+  left: 50%;
+  bottom: 4rem;
+  transform: translateX(-50%);
+  width: 100%;
+}
+.end-deco > span {
+  position: relative;
+  width: 90%;
+  height: 0.1rem;
+  margin: 0 auto;
+  background-color: var(--secondary-pink);
+}
+.end-deco > span::before,
+.end-deco > span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4rem;
+  height: 4rem;
+  background: url(../../img/main-2.png) center center no-repeat;
+  background-size: cover;
+}
+.end-deco > span::before {
+  left: 0;
+}
+.end-deco > span::after {
+  right: 0;
+}
+
+/* media */
+@media (max-width: 1440px) {
+  .section-end {
+    padding: 8rem;
+  }
+}
+@media (max-width: 768px) {
+  .section-end {
+    height: 100vh;
+    padding: 4rem;
+  }
+  .end__inner {
+    height: 100%;
+    padding: 18rem 0 6rem 0;
+  }
+}
+@media (max-width: 480px) {
+  .section-end {
+    padding: 2.4rem;
+  }
+  .end__inner {
+    height: 100%;
+    padding: 12rem 0 6rem 0;
+  }
+  .end-deco > span::before,
+  .end-deco > span::after {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}

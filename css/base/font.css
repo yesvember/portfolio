@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Meditative";
+  src: url("../../font/Meditative.ttf") format("truetype");
+}
+
+/* 영문 세리프 */
+/* font-family: "Meditative", sans-serif; */
+
+/* 영문 산세리프 */
+/* font-family: "Mozilla Text", sans-serif; */
+
+ /* font-family: "Monsieur La Doulaise", cursive; */

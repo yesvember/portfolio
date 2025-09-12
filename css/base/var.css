@@ -1,0 +1,69 @@
+:root {
+  /* 기본 색상  */
+  --white: #fafafa;
+  --smoke-white: #f1f1f1;
+  --white-transparent: rgba(255, 255, 255, 0.2);
+  --black: #222;
+  --gray: #7190a5;
+
+  --primary: #91c8e4; /* 메인 컬러 */
+  --primary-yellow: #fffbde;
+  --secondary-pink: #f7e2e2;
+  --secondary-sky-light: #e5eef4;
+  --secondary-sky: #749bc2;
+  --secondary-indigo: #4682a9;
+}
+
+/* 큰 글씨 32px, 작은 제목 24px, 설명 18px, 데코 12px */
+/* big */
+.big {
+  font-size: 4vw;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+/* title*/
+.title {
+  font-size: 4.8rem;
+  letter-spacing: -0.5px;
+}
+/* sub title */
+.sub-title {
+  font-size: 2.4rem;
+  letter-spacing: -0.5px;
+}
+/* decs */
+.decs {
+  font-size: 1.8rem;
+  letter-spacing: -0.5px;
+}
+/* deco */
+.deco {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+/* 글자 숨기기 */
+.hide {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/* media */
+@media (max-width: 1400px) {
+}
+@media (max-width: 1024px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 480px) {
+  .title {
+    font-size: 3.4rem;
+  }
+  .decs {
+    font-size: 1.6rem;
+    letter-spacing: -0.5px;
+  }
+}
