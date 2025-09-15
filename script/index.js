@@ -1,6 +1,10 @@
 gsap.registerPlugin(ScrollTrigger);
 
-
+document.addEventListener("visibilitychange", () => {
+  if (!document.hidden) {
+    ScrollTrigger.refresh();
+  }
+});
 // header script
 const ACTIVE = "active";
 const menuBtn = document.querySelector(".header__menu-m");
@@ -25,84 +29,53 @@ const menuOpen = () => {
     }
   });
 };
-
 menuOpen();
 
 // main scrolltrigger
-gsap.timeline({
-  scrollTrigger: {
-    trigger: "#main",
-    start: "10% 10%",
-    end: "bottom top",
-    scrub: 1,
-    invalidateOnRefresh: true,
-  },
-})
-.fromTo(".main__text-ani-01", { xPercent: 0, opacity : 1}, { xPercent: -200, opacity : 0 })
-.fromTo(".main__text-ani-02", { xPercent: 0, opacity : 1}, { xPercent: 200, opacity : 0 }, "<");
-
 // intro scrolltrigger
 gsap
   .timeline({
     scrollTrigger: {
-      trigger: ".intro__decs-ani",
+      trigger: ".intro__summary-right",
       start: "top 80%",
       end: "bottom 60%",
       scrub: 1,
     },
   })
   .fromTo(
-    ".intro__decs-ani",
+    ".intro__summary-right",
     { backgroundSize: "0% 100%" },
     { backgroundSize: "100% 100%" }
   );
 
-gsap
-  .timeline({
-    scrollTrigger: {
+
+// 인트로에 하트 내려가는 부분.
+gsap.fromTo('.intro__summary-img > span', {
+  y : -20
+},{
+   y : 20,
+
+  scrollTrigger: {
       trigger: ".intro__contents",
       start: "20% bottom",
       end: "bottom bottom",
-      scrub: 2,
-    },
-  })
-  .fromTo(
-    ".intro__img-wrap > img",
-    { borderRadius: "0 0 0 0" },
-    { borderRadius: "10rem 0 0 0" }
-  );
+      scrub: 1,
+      markers : true
+    }
+})
 
-// work scrolltrigger
-
-gsap
-  .timeline({
+gsap.fromTo('.intro__img-wrap > img', 
+  { y: -20, scale: 1.1 }, 
+  { y: 20, scale: 1.1,
     scrollTrigger: {
-      trigger: ".web__contents-01",
-      start: "top bottom",
+      trigger: ".intro__contents",
+      start: "center bottom",
       end: "bottom bottom",
-      scrub: 2,
-    },
-  })
-  .fromTo(
-    ".web__img-wrap-01 img",
-    { borderRadius: "0 0 0 0" },
-    { borderRadius: "0 10rem 0 0" }
-  );
+      scrub: 1
+    }
+  }
+);
 
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".web__contents-02",
-      start: "top bottom",
-      end: "bottom bottom",
-      scrub: 2,
-    },
-  })
-  .fromTo(
-    ".web__img-wrap-02 img",
-    { borderRadius: "0 0 0 0" },
-    { borderRadius: "10rem 0 0 0" }
-  );
 
 // end scrolltigger
 gsap
@@ -174,4 +147,9 @@ const swiper = new Swiper(".swiper", {
       slidesPerView: 3.1,
     },
   },
+
+   on: {
+    init: () => ScrollTrigger.refresh(),
+    resize: () => ScrollTrigger.refresh(),
+  }
 });

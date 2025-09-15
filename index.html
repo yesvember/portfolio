@@ -39,8 +39,11 @@
     <!-- favicon -->
     <link rel="icon" href="./img/favicon.ico" type="image/png" />
     <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon-2.png" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
     <!-- Swiper CSS -->
@@ -58,7 +61,7 @@
     <header id="header" class="header">
       <div class="header__left">
         <h1 class="logo">
-          <a href="#main" aria-label="메인으로 이동"> s2mewji </a>
+          <a href="#main" aria-label="메인으로 이동"> smj </a>
         </h1>
 
         <button class="header__menu-m" type="button">
@@ -132,62 +135,66 @@
     <div id="wrap" class="wrap">
       <!-- main -->
       <main id="main" class="section-main">
-        <img class="main__deco" src="./img/main-1.png" alt="메인 장식 이미지" />
+        <span class="main__deco"></span>
 
-        <div class="main__text-wrap">
-          <div class="main__text-deco">
-            <span>est. 2025 Portfolio</span>
+        <div class="main__contents">
+          <div class="main__deco-wrap">
+            <span class="main__deco-star"></span>
+            <span class="main__deco-text">since_ 2025</span>
           </div>
-          <h2 class="main__text-ani-01">
-            hello <br class="main__ampty" />
-            i’m seemewji
-          </h2>
-          <h3 class="main__text-ani-02">web designer</h3>
-          <span class="main__text-deco-m"></span>
+
+          <h2 class="main__text-01">seemewji web design</h2>
+          <h3 class="main__text-02">portfolio</h3>
         </div>
       </main>
 
       <!-- section 01 -->
       <section id="intro" class="section-intro">
-        <p class="intro__decs">
-          <span class="intro__decs-ani">
+        <div class="intro__summary">
+          <div class="intro__summary-left">
+            <div class="intro__summary-img">
+              <span></span>
+            </div>
+            <span class="deco intro__summary-deco"
+              >37.3420° N / 127.9206° E</span
+            >
+          </div>
+
+          <p class="intro__summary-right">
             immersive experiences, designed with intent. intuitive, joyful
             interactions crafted with care.
-          </span>
-
-          <span class="deco intro__decs-deco"> 37.3420° N / 127.9206° E </span>
-        </p>
+          </p>
+        </div>
 
         <div class="intro__contents">
           <!-- left -->
-          <div class="intro__text-wrap">
+          <div class="intro__left">
             <h2 class="title">About Me</h2>
 
             <div class="intro__list-wrap">
-              <ul class="intro__list">
-                <li class="decs">심윤지</li>
-                <li class="decs">1998.11.18</li>
-                <li class="decs">010.7625.9698</li>
-                <li class="decs">syj981118@naver.com</li>
-                <li class="decs">영남대학교 회화과 졸업</li>
-              </ul>
-
-              <ul class="intro__list">
-                <li class="decs">KCA 바리스타 2급</li>
-                <li class="decs">컴퓨터그래픽스운용기능사</li>
-                <li class="decs">웹디자인기능사</li>
-                <li class="decs">gtqi 일러스트 1급</li>
-                <li class="decs">gtq 포토샵 1급</li>
-                <li class="decs">2종보통운전면허(오토)</li>
+              <ul>
+                <li class="intro__list">심윤지 / sim yoonji</li>
+                <li class="intro__list">1998.11.18</li>
+                <li class="intro__list">010.7625.9698</li>
+                <li class="intro__list">syj981118@naver.com</li>
+                <li class="intro__list">영남대학교 회화과 졸업</li>
+                <li class="intro__list">kca 바리스타 2급</li>
+                <li class="intro__list">컴퓨터그래픽스운용기능사</li>
+                <li class="intro__list">웹디자인기능사</li>
+                <li class="intro__list">gtqi 일러스트 1급</li>
+                <li class="intro__list">gtq 포토샵 1급</li>
+                <li class="intro__list">2종보통운전면허</li>
               </ul>
             </div>
           </div>
 
           <!-- right -->
-          <figure class="intro__img-wrap">
-            <img src="./img/intro-1.png" alt="심윤지 프로필 사진" />
-            <figcaption class="hide">프로필 이미지</figcaption>
-          </figure>
+          <div class="intro__right">
+            <figure class="intro__img-wrap">
+              <img src="./img/intro-1.png" alt="심윤지 프로필 사진" />
+              <figcaption></figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
@@ -201,9 +208,9 @@
         </div>
 
         <!-- title -->
-        <h2 class="title work__num">my portfolio</h2>
+        <h2 class="title work__title">my portfolio</h2>
         <p class="decs work__decs">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br />Molestiae
           quibusdam nostrum quam.
         </p>
 
@@ -213,7 +220,10 @@
           <div class="web__img-wrap web__img-wrap-01">
             <figure>
               <img src="./img/work-1.jpg" alt="동국제약 이미지" />
-              <figcaption class="figcap">title // Dongkook</figcaption>
+              <figcaption class="figcap">title_Dongkook</figcaption>
+
+              <span class="web__figure-deco web__figure-deco-left"></span>
+              <span class="web__figure-deco web__figure-deco-right"></span>
             </figure>
           </div>
 
@@ -811,6 +821,6 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- index script -->
-    <script src="./script/index.js" defer></script>
+    <script src="./script/index.js"></script>
   </body>
 </html>

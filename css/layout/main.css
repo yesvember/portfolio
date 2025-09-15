@@ -6,50 +6,27 @@
   height: 100vh;
   background-color: var(--primary);
   overflow: hidden;
+  border-left: 1rem solid var(--primary-yellow);
+  border-right: 1rem solid var(--primary-yellow);
 }
-.main__text-wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+.main__contents {
   position: absolute;
   left: 50%;
   top: 60%;
   transform: translate(-50%, -50%);
-  transition: top 0.2s ease-in-out;
-}
-.main__ampty {
-  display: none;
-}
-.main__text-deco {
-  margin-bottom: 2rem;
-  transition: margin-bottom 0.2s ease-in-out;
-}
-.main__text-deco > span {
-  padding: 1.2rem 2.4rem;
-  border-radius: 10rem;
-  font-size: 1.8rem;
-  font-family: "Meditative", sans-serif;
-  font-style: italic;
-  text-transform: capitalize;
-  white-space: nowrap;
-  color: var(--secondary-indigo);
-  background-color: var(--secondary-pink);
-  transition: padding 0.2s ease-in-out, font-size 0.2s ease-in-out;
-}
-
-.main__text-wrap > h3 {
-  text-align: end;
 }
 
 /* same */
-.main__text-wrap > h2,
-.main__text-wrap > h3 {
+.main__text-01,
+.main__text-02 {
+  line-height: 1;
   white-space: nowrap;
   font-weight: 400;
-  font-size: 16rem;
+  font-size: 8vw;
   font-family: "Meditative", sans-serif;
-  text-transform: uppercase;
-  color: var(--secondary-indigo);
+  text-transform: capitalize;
+  color: var(--primary-yellow);
+  text-shadow: 0 0 1rem var(--secondary-indigo);
   transition: font-size 0.2s ease-in-out;
   opacity: 1;
 }
@@ -58,114 +35,58 @@
 .main__deco {
   position: absolute;
   left: 50%;
-  bottom: -2%;
+  bottom: 0;
   transform: translateX(-50%);
-  width: 100vw;
-  height: 22vw;
-}
-.main__text-deco {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.main__text-deco::before {
-  content: "";
   width: 100%;
-  height: 0.2rem;
-  background-color: var(--secondary-pink);
+  height: 4rem;
+  border-radius: 100rem 100rem 0 0;
+  background-color: var(--primary-yellow);
 }
-.main__text-deco::after {
-  content: "";
-  position: absolute;
-  left: -0.5rem;
-  width: 4.4rem;
-  height: 4.4rem;
-  background: url(../../img/main-2.png) center center no-repeat;
-  background-size: contain;
-  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
-}
-.main__text-deco-m {
+.main__deco-wrap {
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  height: 0.2rem;
-  margin-top: 6rem;
-  background-color: var(--secondary-pink);
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  margin-bottom: 2rem;
 }
-.main__text-deco-m::after {
+.main__deco-wrap::before {
   content: "";
   position: absolute;
+  left: 50%;
   top: 50%;
-  right: -0.5rem;
-  transform: translateY(-50%);
-  width: 4.4rem;
-  height: 4.4rem;
+  transform: translate(-50%, -50%);
+  width: 98%;
+  height: 0.1rem;
+  background-color: var(--secondary-pink);
+  z-index: -1;
+}
+.main__deco-text {
+  padding: 1.2rem 2.4rem;
+  border-radius: 10rem;
+  font-size: 1.6rem;
+  font-style: italic;
+  font-family: "Meditative", sans-serif;
+  text-transform: capitalize;
+  white-space: nowrap;
+  color: var(--secondary-sky);
+  background: #f7e2e2;
+  background: linear-gradient(
+    90deg,
+    rgba(247, 226, 226, 1) 0%,
+    rgba(255, 251, 222, 1) 100%
+  );
+}
+.main__deco-star {
+  width: 4rem;
+  height: 4rem;
   background: url(../../img/main-2.png) center center no-repeat;
   background-size: contain;
 }
 
 /* media */
-@media (max-width: 1500px) {
-  .main__text-wrap > h2,
-  .main__text-wrap > h3 {
-    font-size: 14rem;
-  }
-}
-@media (max-width: 1300px) {
-  .main__text-wrap > h2,
-  .main__text-wrap > h3 {
-    font-size: 12rem;
-  }
-}
-@media (max-width: 1100px) {
-  .main__text-wrap > h2,
-  .main__text-wrap > h3 {
-    font-size: 10rem;
-  }
-}
-@media (max-width: 1024px) {
-  .main__text-wrap > h2,
-  .main__text-wrap > h3 {
-    font-size: 8rem;
-  }
-}
 @media (max-width: 768px) {
-  .main__text-wrap {
+  .main__contents {
     top: 50%;
-  }
-  .main__ampty {
-    display: block;
-  }
-  .main__text-deco {
-    margin-bottom: 6rem;
-  }
-  .main__text-deco-m {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-@media (max-width: 580px) {
-  .main__text-wrap > h2,
-  .main__text-wrap > h3 {
-    font-size: 6.4rem;
-  }
-}
-@media (max-width: 480px) {
-  .main__text-wrap > h2,
-  .main__text-wrap > h3 {
-    font-size: 5.8rem;
-  }
-}
-@media (max-width: 410px) {
-  .main__text-wrap > h2,
-  .main__text-wrap > h3 {
-    font-size: 4.4rem;
-  }
-}
-@media (max-width: 320px) {
-  .main__text-deco > span {
-    font-size: 1.6rem;
   }
 }

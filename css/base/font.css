@@ -3,10 +3,11 @@
   src: url("../../font/Meditative.ttf") format("truetype");
 }
 
+/* 제목 */
+/* font-family: "Meditative"; */
+
 /* 영문 세리프 */
-/* font-family: "Meditative", sans-serif; */
+/* font-family: "Lora", serif; */
 
 /* 영문 산세리프 */
 /* font-family: "Mozilla Text", sans-serif; */
-
- /* font-family: "Monsieur La Doulaise", cursive; */
