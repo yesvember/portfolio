@@ -1,15 +1,21 @@
 .section-end {
   padding: 16rem;
-  background-color: var(--primary-yellow);
+  background: #91c8e4;
+  background: linear-gradient(
+    0deg,
+    rgba(145, 200, 228, 1) 0%,
+    rgba(247, 226, 226, 1) 100%
+  );
 }
 .end__inner {
   position: relative;
   width: 100%;
   aspect-ratio: 3 / 4;
   padding: 24rem 0 6rem 0;
-  background: url(../../img/end-2.jpg) center center no-repeat;
+  background: url(../../img/end-1.jpg) center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  border: 0.1rem solid var(--secondary-pink);
 }
 .end__decs {
   position: sticky;
@@ -20,8 +26,7 @@
   text-align: center;
   text-transform: capitalize;
   line-height: 1;
-  color: var(--white);
-  mix-blend-mode: soft-light;
+  color: var(--secondary-pink);
 }
 .end-deco {
   position: absolute;
@@ -45,14 +50,14 @@
   transform: translateY(-50%);
   width: 4rem;
   height: 4rem;
-  background: url(../../img/main-2.png) center center no-repeat;
+  background: url(../../img/clova-2.svg) center center no-repeat;
   background-size: cover;
 }
 .end-deco > span::before {
-  left: 0;
+  left: -1rem;
 }
 .end-deco > span::after {
-  right: 0;
+  right: -1rem;
 }
 
 /* media */

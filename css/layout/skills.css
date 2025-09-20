@@ -2,19 +2,42 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding: 18rem 8rem;
+  padding: 18rem 12rem;
   color: var(--secondary-indigo);
   background-color: var(--primary-yellow);
+  overflow: hidden;
 }
 .section-skills > h2 {
-  font-family: "Meditative", sans-serif;
   text-transform: capitalize;
+}
+.skills-deco {
+  display: flex;
+  position: absolute;
+  left: 12rem;
+  bottom: 18rem;
+  font-size: 1.2rem;
+}
+.skills-deco-01,
+.skills-deco-02,
+.skills-deco-03 {
+  opacity: 0;
+}
+.skills-deco-01 {
+  animation: skills 1s ease-in-out infinite;
+}
+.skills-deco-02 {
+  animation: skills 1s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+.skills-deco-03 {
+  animation: skills 1s ease-in-out infinite;
+  animation-delay: 0.4s;
 }
 .skills__contents {
   width: 50%;
 }
 .skills__contents > p {
-  margin-bottom: 4rem;
+  margin-bottom: 8rem;
 }
 .skills__list-wrap {
   display: flex;
@@ -23,6 +46,7 @@
 }
 .skills__list {
   display: flex;
+  align-items: center;
   column-gap: 4rem;
 }
 .skills__icon {
@@ -30,8 +54,8 @@
   aspect-ratio: 1/1;
   border-radius: 1rem;
 }
-.skills__list:hover .skills__decs {
-  font-weight: 600;
+.skills__list:hover .skills__icon {
+  box-shadow: 0 0 1rem var(--secondary-pink);
 }
 
 /* media */

@@ -14,17 +14,23 @@
   --secondary-indigo: #4682a9;
 }
 
-/* 큰 글씨 32px, 작은 제목 24px, 설명 18px, 데코 12px */
 /* big */
 .big {
-  font-size: 4vw;
-  font-weight: 800;
-  letter-spacing: -1px;
+  line-height: 1;
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 8vw;
+  font-family: "Meditative", sans-serif;
+  text-transform: capitalize;
+  color: var(--primary-yellow);
+  text-shadow: 0 0 1rem var(--secondary-indigo);
 }
 /* title*/
 .title {
   font-size: 4.8rem;
-  letter-spacing: -0.5px;
+  letter-spacing: -1px;
+  font-weight: 500;
+  font-family: "Lora", serif;
 }
 /* sub title */
 .sub-title {
