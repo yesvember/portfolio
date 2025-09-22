@@ -1,10 +1,3 @@
-gsap.registerPlugin(ScrollTrigger);
-
-document.addEventListener("visibilitychange", () => {
-  if (!document.hidden) {
-    ScrollTrigger.refresh();
-  }
-});
 // header script
 const ACTIVE = "active";
 const menuBtn = document.querySelector(".header__menu-m");
@@ -31,45 +24,16 @@ const menuOpen = () => {
 };
 menuOpen();
 
-// main scrolltrigger
+// gsap animation
+gsap.registerPlugin(ScrollTrigger);
+
 // intro scrolltrigger
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".intro__summary-right",
-      start: "top 80%",
-      end: "bottom 60%",
-      scrub: 1,
-    },
-  })
-  .fromTo(
-    ".intro__summary-right",
-    { backgroundSize: "0% 100%" },
-    { backgroundSize: "100% 100%" }
-  );
-
-
-// 인트로에 하트 내려가는 부분.
-gsap.fromTo('.intro__summary-img > span', {
-  y : -20
-},{
-   y : 20,
-
-  scrollTrigger: {
-      trigger: ".intro__contents",
-      start: "20% bottom",
-      end: "bottom bottom",
-      scrub: 1,
-      markers : true
-    }
-})
-
 gsap.fromTo('.intro__img-wrap > img', 
   { y: -60, scale: 1.2 }, 
   { y: 0, scale: 1,
 
     scrollTrigger: {
-      trigger: ".intro__contents",
+      trigger: "#intro",
       start: "center bottom",
       end: "200% bottom",
       scrub: 1
@@ -93,8 +57,8 @@ gsap.fromTo('.skills-deco',
 
 // work scrolltrigger
 gsap.fromTo('.work__intro-left img', 
-  { y: -60, scale: 1.2 }, 
-  { y: 0, scale: 1,
+  { y: -200, scale: 1.2 }, 
+  { y: -300, scale: 1,
 
     scrollTrigger: {
       trigger: ".work__intro",
@@ -119,23 +83,23 @@ gsap.fromTo('.work-deco',
 );
 
 
-
-
 // end scrolltigger
-gsap
-  .timeline({
-    scrollTrigger: {
+gsap.fromTo(
+  ".end__inner",
+  {
+    borderRadius: "20rem 20rem 0 0"
+  },
+  {
+    borderRadius: "100rem 100rem 0 0",
+
+      scrollTrigger: {
       trigger: "#end",
       start: "top bottom",
       end: "50% bottom",
-      scrub: 2,
+      scrub: 1,
     },
-  })
-  .fromTo(
-    ".end__inner",
-    { borderRadius: "20rem 20rem 0 0" },
-    { borderRadius: "100rem 100rem 0 0" }
-  );
+  }
+);
 
 gsap.fromTo(
   ".end__decs",
@@ -148,11 +112,11 @@ gsap.fromTo(
       trigger: "#end",
       start: "90% center",
       end: "bottom center",
-      scrub: 2,
-      markers: true,
+      scrub: 1,
     },
   }
 );
+
 
 // contact scrolltrigger
 gsap
@@ -168,7 +132,24 @@ gsap
   .fromTo(".contact__text__ani-02", { xPercent: -400, opacity : 0}, { xPercent: 0, opacity : 1 }, "<");
 
 
-// swiper
+ 
+// work intro swiper
+const swiperIntro = new Swiper(".work-intro-swiper", {
+  direction: "horizontal",
+  loop: true,
+  slidesPerView: 1, 
+  effect: "fade", 
+  fadeEffect: {
+    crossFade: true 
+  },
+  autoplay: {
+    delay: 1000,
+  },
+});
+
+
+
+// web design swiper
 const swiper1 = new Swiper(".swiper__01", {
   direction: "horizontal",
   loop: false,
@@ -201,6 +182,7 @@ const swiper1 = new Swiper(".swiper__01", {
   },
 });
 
+// web clone coding swiper
 const swiper2 = new Swiper(".swiper__02", {
   direction: "horizontal",
   loop: true,
@@ -227,7 +209,7 @@ const swiper2 = new Swiper(".swiper__02", {
   },
 });
 
-
+// another design swiper
 const swiper3 = new Swiper(".swiper__03", {
   direction: "horizontal",
   loop: true,

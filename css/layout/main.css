@@ -39,8 +39,8 @@
   top: 50%;
   transform: translate(-50%, -50%);
   width: 98%;
-  height: 0.2rem;
-  background-color: var(--secondary-pink);
+  height: 0.1rem;
+  background-color: var(--primary-yellow);
   z-index: -1;
 }
 .main__deco-text {
@@ -58,6 +58,7 @@
     rgba(247, 226, 226, 1) 0%,
     rgba(255, 251, 222, 1) 100%
   );
+  border: 0.1rem solid var(--primary-yellow);
 }
 .main__deco-star {
   width: 4rem;

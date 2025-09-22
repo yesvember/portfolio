@@ -1,3 +1,4 @@
+/* clova icon animation */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -7,6 +8,7 @@
   }
 }
 
+/* text slide animation */
 @keyframes slide {
   0% {
     background-position-x: 0%;
@@ -16,6 +18,7 @@
   }
 }
 
+/* skills deco animation */
 @keyframes skills {
   0% {
     opacity: 0;
@@ -25,6 +28,7 @@
   }
 }
 
+/* skill icons animation */
 @keyframes swing {
   0% {
     transform: rotate(0deg);
@@ -46,6 +50,7 @@
   }
 }
 
+/* swing 적용 */
 .main__text-deco > span:hover,
 .web__etc-icon:hover.web__etc-icon > img,
 .skills__list:hover .skills__icon {

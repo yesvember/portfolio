@@ -39,7 +39,7 @@
 }
 /* decs */
 .decs {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   letter-spacing: -0.5px;
 }
 /* deco */
@@ -67,9 +67,5 @@
 @media (max-width: 480px) {
   .title {
     font-size: 3.4rem;
-  }
-  .decs {
-    font-size: 1.6rem;
-    letter-spacing: -0.5px;
   }
 }

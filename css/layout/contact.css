@@ -20,6 +20,7 @@
 .contact__title-wrap > p {
   text-align: center;
   color: var(--primary-yellow);
+  text-shadow: 0 0 0.2rem var(--secondary-indigo);
 }
 .contact__bottom {
   display: flex;
