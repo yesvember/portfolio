@@ -20,7 +20,7 @@ body {
   color: var(--black);
   background-color: var(--white);
   font-size: 1.6rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Noto Sans", sans-serif;
   word-break: keep-all;
   background-color: var(--primary);
 }

@@ -3,8 +3,13 @@
   width: 100%;
   height: 100vh;
   color: var(--primary-yellow);
-  background-color: var(--primary);
   overflow: hidden;
+}
+.index__contact {
+  background-color: var(--primary);
+}
+.projects__contact {
+  background-color: var(--secondary-indigo);
 }
 .contact__title-wrap {
   position: absolute;

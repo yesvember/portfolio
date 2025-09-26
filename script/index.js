@@ -42,18 +42,18 @@ gsap.fromTo('.intro__img-wrap > img',
 );
 
 // skills scrolltrigger
-gsap.fromTo('.skills-deco', 
-  { y: 0}, 
-  { y: 200,
+// gsap.fromTo('.skills-deco', 
+//   { y: 0}, 
+//   { y: 200,
 
-    scrollTrigger: {
-      trigger: ".section-skills",
-      start: "80% bottom",
-      end: "200% bottom",
-      scrub: 1
-    }
-  }
-);
+//     scrollTrigger: {
+//       trigger: ".section-skills",
+//       start: "80% bottom",
+//       end: "200% bottom",
+//       scrub: 1
+//     }
+//   }
+// );
 
 // work scrolltrigger
 gsap.fromTo('.work__intro-left img', 
@@ -147,8 +147,6 @@ const swiperIntro = new Swiper(".work-intro-swiper", {
   },
 });
 
-
-
 // web design swiper
 const swiper1 = new Swiper(".swiper__01", {
   direction: "horizontal",
@@ -185,7 +183,7 @@ const swiper1 = new Swiper(".swiper__01", {
 // web clone coding swiper
 const swiper2 = new Swiper(".swiper__02", {
   direction: "horizontal",
-  loop: true,
+  loop: false,
   spaceBetween: 10,
    autoplay: {
     delay: 4000,
