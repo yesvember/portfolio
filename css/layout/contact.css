@@ -22,7 +22,7 @@
   margin-bottom: 4rem;
   text-align: center;
 }
-.contact__title-wrap > p {
+.contact__decs {
   text-align: center;
   color: var(--primary-yellow);
   text-shadow: 0 0 0.2rem var(--secondary-indigo);
@@ -73,9 +73,6 @@
 /* deco */
 
 @media (max-width: 1024px) {
-  .contact__title {
-    padding: 0 2rem;
-  }
 }
 @media (max-width: 768px) {
   .contact__title {
@@ -83,6 +80,16 @@
   }
   .contact__bottom {
     padding: 0 1.6rem;
+  }
+  .contact__title-wrap {
+    padding: 0 2rem;
+  }
+  .contact__text__ani-01,
+  .contact__text__ani-02 {
+    font-size: 14vw;
+  }
+  .contact__decs {
+    white-space: wrap;
   }
 }
 @media (max-width: 540px) {

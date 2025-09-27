@@ -1,3 +1,25 @@
+// mouse change
+// const mouse = document.querySelector('.mouse');
+// const contactTxtItems = document.querySelectorAll('.contact p');
+// const MOUSE_CHANGE = 'mouse-change';
+
+// // 마우스 변경
+// window.addEventListener('mousemove', (event) => {
+//     mouse.style.left = `${event.clientX}px`;
+//     mouse.style.top = `${event.clientY}px`;
+// });
+
+// contactTxtItems.forEach((item) => {
+//     item.addEventListener('mouseover', (event) => {
+//         mouse.classList.add(MOUSE_CHANGE);
+//     });
+//     item.addEventListener('mouseout', (event) => {
+//         mouse.classList.remove(MOUSE_CHANGE);
+//     });
+// });
+
+
+
 // header script
 const ACTIVE = "active";
 const menuBtn = document.querySelector(".header__menu-m");
@@ -26,6 +48,9 @@ menuOpen();
 
 // gsap animation
 gsap.registerPlugin(ScrollTrigger);
+window.addEventListener("resize", () => {
+  ScrollTrigger.refresh();
+});
 
 // intro scrolltrigger
 gsap.fromTo('.intro__img-wrap > img', 
@@ -56,18 +81,18 @@ gsap.fromTo('.intro__img-wrap > img',
 // );
 
 // work scrolltrigger
-gsap.fromTo('.work__intro-left img', 
-  { y: -200, scale: 1.2 }, 
-  { y: -300, scale: 1,
+// gsap.fromTo('.work__intro-left img', 
+//   { y: -200, scale: 1.2 }, 
+//   { y: -300, scale: 1,
 
-    scrollTrigger: {
-      trigger: ".work__intro",
-      start: "20% bottom",
-      end: "200% bottom",
-      scrub: 1
-    }
-  }
-);
+//     scrollTrigger: {
+//       trigger: ".work__intro",
+//       start: "20% bottom",
+//       end: "200% bottom",
+//       scrub: 1
+//     }
+//   }
+// );
 
 gsap.fromTo('.work-deco', 
   {rotate : 360}, 
@@ -101,21 +126,18 @@ gsap.fromTo(
   }
 );
 
-gsap.fromTo(
-  ".end__decs",
-  {
-    opacity: 1,
-  },
-  {
-    opacity: 0,
-    scrollTrigger: {
+gsap
+  .timeline({
+  scrollTrigger: {
       trigger: "#end",
       start: "90% center",
       end: "bottom center",
       scrub: 1,
     },
-  }
-);
+  })
+  .fromTo( ".end__decs", 
+    { opacity: 1}, 
+    {opacity: 0});
 
 
 // contact scrolltrigger
@@ -134,18 +156,18 @@ gsap
 
  
 // work intro swiper
-const swiperIntro = new Swiper(".work-intro-swiper", {
-  direction: "horizontal",
-  loop: true,
-  slidesPerView: 1, 
-  effect: "fade", 
-  fadeEffect: {
-    crossFade: true 
-  },
-  autoplay: {
-    delay: 1000,
-  },
-});
+ const swiperIntro = new Swiper(".work-intro-swiper", {
+   direction: "horizontal",
+   loop: true,
+   slidesPerView: 1, 
+   effect: "fade", 
+   fadeEffect: {
+     crossFade: true 
+   },
+   autoplay: {
+     delay: 1000,
+   },
+ });
 
 // web design swiper
 const swiper1 = new Swiper(".swiper__01", {
@@ -158,12 +180,6 @@ const swiper1 = new Swiper(".swiper__01", {
     pauseOnMouseEnter: true, 
   },
 
-    navigation: {
-    nextEl: ".swiper-next",
-    prevEl: ".swiper-prev",
-  },
-  
-
   breakpoints: {
     0: {
       slidesPerView: 1, 
@@ -171,10 +187,10 @@ const swiper1 = new Swiper(".swiper__01", {
     481: {
       slidesPerView: 1,
     },
-    1025: {
+    769: {
       slidesPerView: 2,
     },
-    1400: {
+    1200: { 
       slidesPerView: 3,
     },
   },
@@ -192,13 +208,13 @@ const swiper2 = new Swiper(".swiper__02", {
   },
 
   breakpoints: {
-    0: {
+     0: {
       slidesPerView: 1, 
     },
     481: {
       slidesPerView: 1,
     },
-    1025: {
+    769: {
       slidesPerView: 2,
     },
     1400: {
@@ -224,6 +240,9 @@ const swiper3 = new Swiper(".swiper__03", {
     },
     481: {
       slidesPerView: 1,
+    },
+    769: {
+      slidesPerView: 2,
     },
     1025: {
       slidesPerView: 3,

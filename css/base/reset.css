@@ -58,3 +58,8 @@ img {
   object-fit: cover;
   vertical-align: middle;
 }
+@media (max-width: 480px) {
+  p {
+    font-size: 1.4rem;
+  }
+}

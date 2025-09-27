@@ -22,6 +22,9 @@
   transition: font-size 0.2s ease-in-out;
   opacity: 1;
 }
+.empty-m {
+  display: none;
+}
 
 /* deco */
 .main__deco-wrap {
@@ -70,8 +73,24 @@
 }
 
 /* media */
+@media (max-width: 1024px) {
+}
+
 @media (max-width: 768px) {
   .main__contents {
-    top: 50%;
+  }
+  .main__text-01,
+  .main__text-02 {
+    font-size: 14vw;
+    text-align: center;
+  }
+  .empty-m {
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  .main__deco-star {
+    width: 2.4rem;
+    height: 2.4rem;
   }
 }

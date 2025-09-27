@@ -2,9 +2,9 @@
 @import url(./base/reset.css);
 @import url(./base/var.css);
 @import url(./base/font.css);
+@import url(./effects/deco.css);
 @import url(./components/button.css);
 @import url(./effects/animation.css);
-@import url(./effects/loading.css);
 
 @import url(./layout/header.css);
 @import url(./layout/main.css);

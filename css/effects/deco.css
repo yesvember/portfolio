@@ -1,0 +1,28 @@
+/* .mouse {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 2rem;
+  height: 2rem;
+  background-color: #00e700;
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 20000;
+  transition: transform 0.2s ease-in, opacity 0.2s ease-in,
+    background-color 0.2s ease-in;
+  -webkit-transition: transform 0.2s ease-in, opacity 0.2s ease-in,
+    background-color 0.2s ease-in;
+  -moz-transition: transform 0.2s ease-in, opacity 0.2s ease-in,
+    background-color 0.2s ease-in;
+  -o-transition: transform 0.2s ease-in, opacity 0.2s ease-in,
+    background-color 0.2s ease-in;
+}
+
+.mouse-change {
+  transform: scale(10);
+  background: url(../img/icon/mouse.png) center center no-repeat;
+  background-size: cover;
+  background-color: none;
+} */

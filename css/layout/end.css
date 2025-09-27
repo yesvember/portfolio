@@ -20,13 +20,13 @@
 .end__decs {
   position: sticky;
   top: 20rem;
-  width: 80%;
   margin: 0 auto;
   font-family: "Meditative", sans-serif;
   text-align: center;
   text-transform: capitalize;
   line-height: 1;
   color: var(--secondary-pink);
+  opacity: 1;
 }
 .end-deco {
   position: absolute;
@@ -66,17 +66,37 @@
     padding: 8rem;
   }
 }
+@media (max-width: 868px) {
+  .end__inner {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    padding: 18rem 0 6rem 0;
+    background: url(../../img/end-1.jpg) center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    border: 0.1rem solid var(--secondary-pink);
+  }
+}
 @media (max-width: 768px) {
   .section-end {
-    height: 100vh;
+    height: 160vh;
     padding: 4rem;
   }
   .end__inner {
     height: 100%;
     padding: 18rem 0 6rem 0;
   }
+  .end-deco > span::before,
+  .end-deco > span::after {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
 }
 @media (max-width: 480px) {
+  .section-end {
+    height: 140vh;
+  }
   .section-end {
     padding: 2.4rem;
   }
