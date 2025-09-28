@@ -52,10 +52,26 @@ window.addEventListener("resize", () => {
   ScrollTrigger.refresh();
 });
 
+// main scrolltrigger
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: "#main",
+      start: "top top",
+      end: "bottom top",
+      scrub: 1,
+      markers:true
+    },
+  })
+  .fromTo(".main__text-01", { xPercent: 0, opacity : 1}, { xPercent: 100, opacity : 0 })
+  .fromTo(".main__text-02", { xPercent: 0, opacity : 1}, { xPercent: -100, opacity : 0 }, "<");
+
+
+
 // intro scrolltrigger
 gsap.fromTo('.intro__img-wrap > img', 
-  { y: -60, scale: 1.2 }, 
-  { y: 0, scale: 1,
+  { scale: 1.4 }, 
+  { scale: 1,
 
     scrollTrigger: {
       trigger: "#intro",
@@ -66,33 +82,19 @@ gsap.fromTo('.intro__img-wrap > img',
   }
 );
 
-// skills scrolltrigger
-// gsap.fromTo('.skills-deco', 
-//   { y: 0}, 
-//   { y: 200,
-
-//     scrollTrigger: {
-//       trigger: ".section-skills",
-//       start: "80% bottom",
-//       end: "200% bottom",
-//       scrub: 1
-//     }
-//   }
-// );
-
 // work scrolltrigger
-// gsap.fromTo('.work__intro-left img', 
-//   { y: -200, scale: 1.2 }, 
-//   { y: -300, scale: 1,
+ gsap.fromTo('.work-intro-swiper img', 
+   { scale: 1.4 }, 
+   { scale: 1,
 
-//     scrollTrigger: {
-//       trigger: ".work__intro",
-//       start: "20% bottom",
-//       end: "200% bottom",
-//       scrub: 1
-//     }
-//   }
-// );
+     scrollTrigger: {
+       trigger: ".work__intro",
+       start: "20% bottom",
+       end: "200% bottom",
+       scrub: 1
+     }
+   }
+ );
 
 gsap.fromTo('.work-deco', 
   {rotate : 360}, 

@@ -2,83 +2,28 @@
 /* 큰 글씨 11vw -> 14vw */
 /* 데코 글씨 18px -> 16px */
 .section-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
+  padding-top: 10vw;
   background-color: var(--primary);
   overflow: hidden;
   border-left: 1rem solid var(--primary-yellow);
   border-right: 1rem solid var(--primary-yellow);
 }
-.main__contents {
-  position: absolute;
-  left: 50%;
-  top: 60%;
-  transform: translate(-50%, -50%);
-}
-
-/* same */
 .main__text-01,
 .main__text-02 {
-  transition: font-size 0.2s ease-in-out;
-  opacity: 1;
 }
 .empty-m {
   display: none;
 }
-
-/* deco */
-.main__deco-wrap {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 2rem;
-}
-.main__deco-wrap::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 98%;
-  height: 0.1rem;
-  background-color: var(--primary-yellow);
-  z-index: -1;
-}
-.main__deco-text {
-  padding: 1.2rem 3.4rem;
-  border-radius: 10rem;
-  font-size: 1.6rem;
-  font-style: italic;
-  font-family: "Meditative", sans-serif;
-  text-transform: capitalize;
-  white-space: nowrap;
-  color: var(--secondary-sky);
-  background: #f7e2e2;
-  background: linear-gradient(
-    90deg,
-    rgba(247, 226, 226, 1) 0%,
-    rgba(255, 251, 222, 1) 100%
-  );
-  border: 0.1rem solid var(--primary-yellow);
-}
-.main__deco-star {
-  width: 4rem;
-  height: 4rem;
-  background: url(../../img/clova-1.svg) center center no-repeat;
-  background-size: contain;
-  transform-origin: center center;
-  animation: rotate 2s ease-in-out infinite;
-}
-
 /* media */
 @media (max-width: 1024px) {
 }
 
 @media (max-width: 768px) {
-  .main__contents {
-  }
   .main__text-01,
   .main__text-02 {
     font-size: 14vw;
@@ -89,8 +34,4 @@
   }
 }
 @media (max-width: 480px) {
-  .main__deco-star {
-    width: 2.4rem;
-    height: 2.4rem;
-  }
 }

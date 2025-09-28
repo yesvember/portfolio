@@ -9,8 +9,20 @@
   overflow: hidden;
 }
 .work__intro-left {
+  position: relative;
   border: 0.1rem solid var(--secondary-indigo);
   overflow: hidden;
+}
+.work__intro__decs {
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  font-style: italic;
+  font-family: "Lora", serif;
+  color: var(--white);
+  z-index: 10;
 }
 .work-intro-swiper {
   height: 100%;
@@ -23,13 +35,14 @@
   row-gap: 4rem;
 }
 .work-deco {
-  width: 20rem;
-  height: 20rem;
-  background: url(../../img/clova-3.svg) center center no-repeat;
+  width: 10rem;
+  height: 10rem;
+  background: url(../../img/clova-4.svg) center center no-repeat;
   background-size: contain;
 }
 .work__intro-right > h2 {
   font-size: 4vw;
+  text-align: center;
 }
 
 /* work__01 */

@@ -14,10 +14,10 @@
 
 /* big */
 .big {
-  line-height: 1;
+  line-height: 1.1;
   white-space: nowrap;
   font-weight: 400;
-  font-size: 8vw;
+  font-size: 9vw;
   font-family: "Meditative", sans-serif;
   text-transform: capitalize;
   color: var(--primary-yellow);
@@ -27,7 +27,7 @@
 .title {
   font-size: 4.8rem;
   letter-spacing: -1px;
-  font-weight: 500;
+  font-weight: 800;
   font-family: "Lora", serif;
 }
 /* sub title */
@@ -58,7 +58,7 @@
 /* media */
 @media (max-width: 1024px) {
   .big {
-    font-size: 9vw;
+    font-size: 10vw;
   }
 }
 @media (max-width: 480px) {
