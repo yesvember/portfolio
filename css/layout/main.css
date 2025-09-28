@@ -13,8 +13,32 @@
   border-left: 1rem solid var(--primary-yellow);
   border-right: 1rem solid var(--primary-yellow);
 }
-.main__text-01,
-.main__text-02 {
+.main__contents {
+  position: relative;
+}
+.main__deco {
+  position: absolute;
+  right: 2rem;
+  bottom: 4rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  color: var(--primary-yellow);
+}
+.main__deco > span {
+  opacity: 0;
+}
+.main__deco-01 {
+  animation: deco 0.8s ease-in-out infinite;
+  animation-delay: 3s;
+}
+.main__deco-02 {
+  animation: deco 0.8s ease-in-out infinite;
+  animation-delay: 2s;
+}
+.main__deco-03 {
+  animation: deco 0.8s ease-in-out infinite;
+  animation-delay: 1s;
 }
 .empty-m {
   display: none;
@@ -28,6 +52,12 @@
   .main__text-02 {
     font-size: 14vw;
     text-align: center;
+  }
+  .main__deco {
+    position: absolute;
+    right: 2rem;
+    bottom: -6rem;
+    font-size: 1rem;
   }
   .empty-m {
     display: block;

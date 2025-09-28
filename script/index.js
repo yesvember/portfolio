@@ -53,19 +53,16 @@ window.addEventListener("resize", () => {
 });
 
 // main scrolltrigger
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: "#main",
-      start: "top top",
-      end: "bottom top",
-      scrub: 1,
-      markers:true
-    },
-  })
-  .fromTo(".main__text-01", { xPercent: 0, opacity : 1}, { xPercent: 100, opacity : 0 })
-  .fromTo(".main__text-02", { xPercent: 0, opacity : 1}, { xPercent: -100, opacity : 0 }, "<");
-
+gsap.timeline({
+  scrollTrigger: {
+    trigger: "#main",
+    start: "top top",
+    end: "bottom top", 
+    scrub:  1,
+  }
+})
+.fromTo(".main__text-01", { x: 0, opacity: 1 }, { x: 400, opacity: 0 })
+.fromTo(".main__text-02", { x: 0, opacity: 1 }, { x: -400, opacity: 0 }, "<");
 
 
 // intro scrolltrigger
@@ -108,38 +105,6 @@ gsap.fromTo('.work-deco',
     }
   }
 );
-
-
-// end scrolltigger
-gsap.fromTo(
-  ".end__inner",
-  {
-    borderRadius: "20rem 20rem 0 0"
-  },
-  {
-    borderRadius: "100rem 100rem 0 0",
-
-      scrollTrigger: {
-      trigger: "#end",
-      start: "top bottom",
-      end: "50% bottom",
-      scrub: 1,
-    },
-  }
-);
-
-gsap
-  .timeline({
-  scrollTrigger: {
-      trigger: "#end",
-      start: "90% center",
-      end: "bottom center",
-      scrub: 1,
-    },
-  })
-  .fromTo( ".end__decs", 
-    { opacity: 1}, 
-    {opacity: 0});
 
 
 // contact scrolltrigger

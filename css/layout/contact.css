@@ -33,7 +33,7 @@
   justify-content: space-between;
   position: absolute;
   left: 0;
-  bottom: 4rem;
+  bottom: 8rem;
   padding: 0 4rem;
   width: 100%;
 }
@@ -97,6 +97,5 @@
     flex-direction: column;
     justify-content: center;
     row-gap: 2rem;
-    bottom: 6rem;
   }
 }

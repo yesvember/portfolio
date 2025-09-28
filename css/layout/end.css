@@ -11,17 +11,19 @@
   position: relative;
   width: 100%;
   aspect-ratio: 3 / 4;
-  padding: 24rem 0 6rem 0;
+  padding: 24rem 0 2rem 0;
   background: url(../../img/end-1.jpg) center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  border-radius: 100rem 100rem 0 0;
   border: 0.1rem solid var(--secondary-pink);
 }
 .end__decs {
   position: sticky;
-  top: 20rem;
+  top: 10rem;
   margin: 0 auto;
   font-family: "Meditative", sans-serif;
+  font-size: 4.8rem;
   font-weight: 500;
   text-align: center;
   text-transform: capitalize;
@@ -38,10 +40,8 @@
 }
 .end-deco > span {
   position: relative;
-  width: 90%;
-  height: 0.1rem;
+  width: 100%;
   margin: 0 auto;
-  background-color: var(--secondary-pink);
 }
 .end-deco > span::before,
 .end-deco > span::after {
@@ -49,16 +49,19 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  transform-origin: center center;
   width: 4rem;
   height: 4rem;
   background: url(../../img/clova-2.svg) center center no-repeat;
   background-size: cover;
 }
 .end-deco > span::before {
-  left: -1rem;
+  left: 2rem;
+  animation: rotate 2s ease-in-out infinite;
 }
 .end-deco > span::after {
-  right: -1rem;
+  right: 2rem;
+  animation: rotate 2s ease-in-out infinite reverse;
 }
 
 /* media */
@@ -104,6 +107,9 @@
   .end__inner {
     height: 100%;
     padding: 12rem 0 6rem 0;
+  }
+  .end__decs {
+    font-size: 3.4rem;
   }
   .end-deco > span::before,
   .end-deco > span::after {
