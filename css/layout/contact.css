@@ -52,7 +52,6 @@
   font-weight: 500;
   text-transform: capitalize;
   color: var(--secondary-indigo);
-  cursor: pointer;
 }
 .contact-icon {
   width: 1.8rem;

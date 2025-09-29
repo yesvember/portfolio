@@ -15,6 +15,11 @@ html {
   font-size: 10px;
   scroll-behavior: smooth;
 }
+html,
+a,
+button {
+  cursor: none;
+}
 body {
   position: relative;
   color: var(--black);
@@ -42,9 +47,6 @@ dl,
 dt,
 dd {
   list-style: none;
-}
-button {
-  cursor: pointer;
 }
 button,
 input {

@@ -1,27 +1,50 @@
 // mouse change
-// const mouse = document.querySelector('.mouse');
-// const contactTxtItems = document.querySelectorAll('.contact p');
-// const MOUSE_CHANGE = 'mouse-change';
+ const mouse = document.querySelector('.mouse');
+ const endInner = document.querySelectorAll('.end__inner');
+ const workSlide = document.querySelectorAll('.swiper-slide-ani');
+ const aAll = document.querySelectorAll('.event');
+ const ACTIVE = "active";
+ const CHANGE = 'active-02';
+ const SCALE = 'active-03';
 
-// // 마우스 변경
-// window.addEventListener('mousemove', (event) => {
-//     mouse.style.left = `${event.clientX}px`;
-//     mouse.style.top = `${event.clientY}px`;
-// });
+// 마우스 변경
+ window.addEventListener('mousemove', (event) => {
+     mouse.style.left = `${event.clientX}px`; //clientX = viewport에서 수평좌표 제공해줌. 왼쪽 = 0
+     mouse.style.top = `${event.clientY}px`; //clientX = viewport에서 수직좌표 제공해줌. 맨 위 = 0
+ });
 
-// contactTxtItems.forEach((item) => {
-//     item.addEventListener('mouseover', (event) => {
-//         mouse.classList.add(MOUSE_CHANGE);
-//     });
-//     item.addEventListener('mouseout', (event) => {
-//         mouse.classList.remove(MOUSE_CHANGE);
-//     });
-// });
+// work slide hover시 mouse 변화
+ workSlide.forEach((item) => {
+   item.addEventListener('mouseover', () => { 
+         mouse.classList.add(ACTIVE);
+    });
+    item.addEventListener('mouseout', () => {
+        mouse.classList.remove(ACTIVE);
+    });
+ })
 
+// end inner hover시 mouse 변화
+ endInner.forEach((item) => {
+    item.addEventListener('mouseover', () => {
+        mouse.classList.add(CHANGE);
+    });
+    item.addEventListener('mouseout', () => {
+        mouse.classList.remove(CHANGE);
+    });
+ });
+
+// a tag hover시 mouse 변화
+  aAll.forEach((item) => {
+   item.addEventListener('mouseover', () => {
+         mouse.classList.add(SCALE);
+    });
+    item.addEventListener('mouseout', () => {
+        mouse.classList.remove(SCALE);
+    });
+ })
 
 
 // header script
-const ACTIVE = "active";
 const menuBtn = document.querySelector(".header__menu-m");
 const mobileMenu = document.querySelector(".menu__m");
 const mobileMenuList = mobileMenu.querySelectorAll(".menu__m-list");
@@ -48,6 +71,7 @@ menuOpen();
 
 // gsap animation
 gsap.registerPlugin(ScrollTrigger);
+
 window.addEventListener("resize", () => {
   ScrollTrigger.refresh();
 });
@@ -56,7 +80,7 @@ window.addEventListener("resize", () => {
 gsap.timeline({
   scrollTrigger: {
     trigger: "#main",
-    start: "top top",
+    start: "20% top",
     end: "bottom top", 
     scrub:  1,
   }
@@ -117,8 +141,8 @@ gsap
       scrub: 2,
     },
   })
-  .fromTo(".contact__text__ani-01", { xPercent: 400, opacity : 0}, { xPercent: 0, opacity : 1 })
-  .fromTo(".contact__text__ani-02", { xPercent: -400, opacity : 0}, { xPercent: 0, opacity : 1 }, "<");
+  .fromTo(".contact__text__ani-01", { x: 400, opacity : 0}, { x: 0, opacity : 1 })
+  .fromTo(".contact__text__ani-02", { x: -400, opacity : 0}, { x: 0, opacity : 1 }, "<");
 
 
  
