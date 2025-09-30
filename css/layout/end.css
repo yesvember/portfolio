@@ -81,14 +81,11 @@
     background-attachment: fixed;
     border: 0.1rem solid var(--secondary-pink);
   }
-  .end__decs {
-    font-size: 3.4rem;
-  }
 }
 @media (max-width: 768px) {
   .section-end {
     height: 160vh;
-    padding: 4rem;
+    padding: 8rem 1.6rem;
   }
   .end__inner {
     height: 100%;
@@ -103,9 +100,6 @@
 @media (max-width: 480px) {
   .section-end {
     height: 140vh;
-  }
-  .section-end {
-    padding: 2.4rem;
   }
   .end__inner {
     height: 100%;

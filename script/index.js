@@ -1,53 +1,42 @@
-// mouse change
- const mouse = document.querySelector('.mouse');
- const endInner = document.querySelectorAll('.end__inner');
- const workSlide = document.querySelectorAll('.swiper-slide-ani');
- const aAll = document.querySelectorAll('.event');
- const ACTIVE = "active";
- const CHANGE = 'active-02';
- const SCALE = 'active-03';
+// 마우스 커서 이벤트
+// if (window.innerWidth > 1024) {
+   const mouse = document.querySelector('.mouse');
+   const endInner = document.querySelectorAll('.end__inner');
+   const workSlide = document.querySelectorAll('.swiper-slide-ani');
+   const aAll = document.querySelectorAll('.event');
+   const CHANGE = 'active-02';
+   const SCALE = 'active-03';
 
-// 마우스 변경
- window.addEventListener('mousemove', (event) => {
-     mouse.style.left = `${event.clientX}px`; //clientX = viewport에서 수평좌표 제공해줌. 왼쪽 = 0
-     mouse.style.top = `${event.clientY}px`; //clientX = viewport에서 수직좌표 제공해줌. 맨 위 = 0
- });
+   window.addEventListener('mousemove', (event) => {
+       mouse.style.left = `${event.clientX}px`;
+       mouse.style.top = `${event.clientY}px`;
+   });
 
-// work slide hover시 mouse 변화
- workSlide.forEach((item) => {
-   item.addEventListener('mouseover', () => { 
-         mouse.classList.add(ACTIVE);
-    });
-    item.addEventListener('mouseout', () => {
-        mouse.classList.remove(ACTIVE);
-    });
- })
+  // work swiper slide 
+   workSlide.forEach((item) => {
+     item.addEventListener('mouseover', () => mouse.classList.add(ACTIVE));
+     item.addEventListener('mouseout', () => mouse.classList.remove(ACTIVE));
+   });
 
-// end inner hover시 mouse 변화
- endInner.forEach((item) => {
-    item.addEventListener('mouseover', () => {
-        mouse.classList.add(CHANGE);
-    });
-    item.addEventListener('mouseout', () => {
-        mouse.classList.remove(CHANGE);
-    });
- });
+  // end inner
+   endInner.forEach((item) => {
+     item.addEventListener('mouseover', () => mouse.classList.add(CHANGE));
+     item.addEventListener('mouseout', () => mouse.classList.remove(CHANGE));
+   });
 
-// a tag hover시 mouse 변화
-  aAll.forEach((item) => {
-   item.addEventListener('mouseover', () => {
-         mouse.classList.add(SCALE);
-    });
-    item.addEventListener('mouseout', () => {
-        mouse.classList.remove(SCALE);
-    });
- })
+  // a tag 
+   aAll.forEach((item) => {
+     item.addEventListener('mouseover', () => mouse.classList.add(SCALE));
+     item.addEventListener('mouseout', () => mouse.classList.remove(SCALE));
+   });
+// }
 
 
 // header script
 const menuBtn = document.querySelector(".header__menu-m");
 const mobileMenu = document.querySelector(".menu__m");
 const mobileMenuList = mobileMenu.querySelectorAll(".menu__m-list");
+const ACTIVE = "active";
 
 const menuOpen = () => {
   menuBtn.addEventListener("click", () => {
@@ -59,15 +48,15 @@ const menuOpen = () => {
       mobileMenu.classList.remove(ACTIVE);
     });
   });
-
-  window.addEventListener("resize", () => {
-    let windowWith = window.innerWidth;
-    if (windowWith >= 1024) {
-      mobileMenu.classList.remove(ACTIVE);
-    }
-  });
 };
 menuOpen();
+
+window.addEventListener("resize", () => {
+  let windowWidth = window.innerWidth;
+  if (windowWidth >= 1024 || mobileMenu.classList.contains(ACTIVE)) {
+    mobileMenu.classList.remove(ACTIVE);
+  }
+});
 
 // gsap animation
 gsap.registerPlugin(ScrollTrigger);

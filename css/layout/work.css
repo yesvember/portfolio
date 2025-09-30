@@ -214,8 +214,14 @@
 }
 
 @media (max-width: 768px) {
+  .work__01 {
+    padding: 12rem 3.2rem;
+  }
   .section-work {
     padding-top: inherit;
+  }
+  .work__02-inner {
+    padding: 12rem 1.6rem;
   }
   .work__intro {
     grid-template-columns: 1fr;
@@ -246,7 +252,7 @@
     padding: 0 1.6rem;
   }
   .swiper__03 {
-    width: calc(100% - 4rem);
+    width: calc(100% - 1.6em);
   }
 }
 @media (max-width: 320px) {

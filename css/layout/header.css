@@ -91,61 +91,67 @@
   width: 100%;
   height: 100vh;
   z-index: 10000;
-  background-color: var(--primary-yellow);
+  color: var(--secondary-indigo);
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(2rem);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.2s ease;
 }
-
+.header__menu-close {
+  position: absolute;
+  left: 50%;
+  top: 10rem;
+  transform: translateX(-50%);
+  width: 4.8rem;
+  height: 4.8rem;
+  background-color: var(--primary-yellow);
+  border-radius: 100%;
+}
+.header__menu-close::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.4rem;
+  height: 1.4rem;
+  background: url(../../img/close.svg) center center no-repeat;
+  background-size: contain;
+}
 .menu__m > ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 1rem;
+  row-gap: 2rem;
   height: 100%;
 }
-
 .menu__m-list {
   position: relative;
   width: 50%;
-  height: 10rem;
   font-size: 8vw;
-  line-height: 1.2;
+  text-transform: capitalize;
+  text-align: center;
 }
-
 .menu__m-list > a {
   font-family: "Meditative", sans-serif;
 }
-
-.menu__m-text {
+.menu__m-list > a::before {
+  content: "";
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: var(--secondary-indigo);
-  transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-.menu__m-ani-01 {
+  left: 0rem;
   top: 50%;
-}
-
-.menu__m-ani-02 {
-  top: 100%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  background-color: var(--secondary-indigo);
   opacity: 0;
+  transition: opacity 0.2s ease-in-out, left 0.2s ease-in-out;
 }
-
-.menu__m-list:hover .menu__m-text {
-  color: var(--primary);
-}
-
-.menu__m-list:hover .menu__m-ani-01 {
-  top: 0%;
-  opacity: 0;
-}
-
-.menu__m-list:hover .menu__m-ani-02 {
-  top: 50%;
+.menu__m-list:hover > a::before {
+  left: 1rem;
   opacity: 1;
 }
 
@@ -188,12 +194,6 @@
 }
 
 @media (max-width: 480px) {
-  .menu__m-list {
-    height: 6rem;
-  }
 }
 @media (max-width: 320px) {
-  .menu__m-list {
-    height: 4rem;
-  }
 }
